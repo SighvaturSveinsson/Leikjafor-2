@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour {
     private WeaponManager weapon_Manager;
 
     public float fireRate = 15f;
+    // Time that passes before the next bullet is fired
     private float nextTimeToFire;
     public float damage = 20f;
 
@@ -18,12 +19,6 @@ public class PlayerAttack : MonoBehaviour {
     private GameObject crosshair;
 
     private bool is_Aiming;
-
-    [SerializeField]
-    private GameObject arrow_Prefab, spear_Prefab;
-
-    [SerializeField]
-    private Transform arrow_Bow_StartPosition;
 
     void Awake() {
 
@@ -55,8 +50,7 @@ public class PlayerAttack : MonoBehaviour {
         // Gets current selected weapon from WeaponManager.cs and if the player has a weapon with auto(multiple) fire such as an assault rifle
         if (weapon_Manager.GetCurrentSelectedWeapon().fireType == WeaponFireType.MULTIPLE) {
 
-            // if we press and hold left mouse click AND
-            // if Time is greater than the nextTimeToFire
+            // If the player presses and holds left mouse click AND if Time is greater than the nextTimeToFire
             if(Input.GetMouseButton(0) && Time.time > nextTimeToFire) {
 
                 nextTimeToFire = Time.time + 1f / fireRate;
@@ -148,7 +142,7 @@ public class PlayerAttack : MonoBehaviour {
         if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit)) {
 
             if(hit.transform.tag == "Enemy") {
-                // hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+                hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
             }
 
         }

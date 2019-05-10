@@ -46,7 +46,6 @@ public class WeaponHandler : MonoBehaviour {
     public void ShootAnimation() {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-            print("asdasd");
             anim.SetTrigger("Shoot");
         }
             
