@@ -8,6 +8,7 @@ TagManager:
   - Crosshair
   - Look Root
   - FP Camera
+  - Arrow
   - Enemy
   layers:
   - Default
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - FirstPerson
+  - FirsPerson
   - Enemy
   - Player
   - 

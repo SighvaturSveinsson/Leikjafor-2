@@ -4,8 +4,7 @@
 AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_Name: Assault Rifle Shoot
   serializedVersion: 6
   m_Legacy: 0
@@ -33650,22 +33649,23 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0
-    functionName: Turn_On_MuzzleFlash
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
+  - time: 0.041666668
     functionName: Play_ShootSound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.125
+  - time: 0.041666668
+    functionName: Turn_On_MuzzleFlash
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.16666667
     functionName: Turn_Off_MuzzleFlash
     data: 
     objectReferenceParameter: {fileID: 0}
